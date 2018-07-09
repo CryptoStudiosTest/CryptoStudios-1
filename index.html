@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Lobster|Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<body class="w3-teal">
+    <h1>CryptoStudios Website Release</h1>
+    <p>Welcome to Crypto Studios website release!<br>Please folow us on twitter <a href="https://www.twitter.com/StudiosCrypto">here.</a></p>
+    <table class="w3-display-middle">
+    <tr class = "w3-xxlarge">
+        <th>Days</th>
+        <th>Hours</th>
+        <th>Minutes</th>
+        <th>Seconds</th>
+        </tr>
+        
+        <tr class = "w3-xxxlarge">
+            <td id="days">00</td>
+            <td id="hours">00</td>
+            <td id="min">00</td>
+            <td id="sec">00</td>
+        </tr>
+    </table>
+    <style>
+        th,td{
+            padding: 20px;
+            text-align: center;
+        }
+        th{
+            font-family: 'Lobster', cursive;
+        }
+        td{
+            font-family: 'Bangers', cursive;
+            padding-top: 10px;
+        }
+        h1{
+            font-family: 'Raleway', sans-serif;
+            text-align: center;
+            padding-top: 250px;
+            font-style: oblique;
+            font-weight: 400;
+        }
+        p{
+           font-family: 'Raleway', sans-serif;
+            padding-bottom: 80px;
+            text-align: center;
+            font-style: oblique;
+            font-weight: 400; 
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function cd(){
+        var rem_time = new Date(2018,6,15).getTime() - new Date().getTime();
+        
+        var s = Math.floor(rem_time / 1000);
+        var m = Math.floor(s / 60);
+        var h = Math.floor(m / 60);
+        var d = Math.floor(h / 24);
+        
+        s %= 60;
+        m %= 60;
+        h %= 60;
+        
+        document.getElementById("days").innerHTML = d;
+        document.getElementById("hours").innerHTML = h;
+        document.getElementById("min").innerHTML = m;
+        document.getElementById("sec").innerHTML = s;
+        
+        setInterval(cd, 1000);
+            
+        }
+        cd();
+    </script>
+    </body>
+</html>
